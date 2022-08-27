@@ -20,7 +20,7 @@ if choice == 1:
     print('1 - Windows')
     print('2 - Linux')
     choice2 = int(input())
-    if choice2 == 1:        # Pour les OS Windows
+    if choice2 == 1:
         dossier = list(p.glob('**/*.md'))
         print("*************************************")
         print("Fichier que vous pouvez convertir: ")
@@ -28,10 +28,10 @@ if choice == 1:
         print("*************************************")
         while True:
             fichier = input("Quel est le nom de votre fichier markdown (sans l'extension) : ")
-            os.system("python -m markdown " + fichier + ".md > " + fichier + ".html")
+            os.system(f"python -m markdown {fichier}.md > {fichier}.html")
             print("Ok.")
 
-    elif choice2 == 2:      # Pour les OS Linux
+    elif choice2 == 2:
         dossier = list(p.glob('**/*.md'))
         print("*************************************")
         print("Fichier que vous pouvez convertir: ")
@@ -39,7 +39,7 @@ if choice == 1:
         print("*************************************")
         while True:
             fichier = input("Quel est le nom de votre fichier markdown (avec l'extension) : ")
-            os.system("python3 -m markdown " + fichier + ".md > " + fichier + ".html")
+            os.system(f"python3 -m markdown {fichier}.md > {fichier}.html")
             print("Ok.")
 elif choice == 2:
     os.system("pip install markdown")
